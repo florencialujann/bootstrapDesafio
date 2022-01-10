@@ -1,3 +1,163 @@
+@import "paleta";
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
 body{
     background-color: whitesmoke;
+}
+header h1{
+    color: $azul;
+}
+.blender{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.blender img{
+    position: absolute;
+}
+.blender h1{
+    font-size: 65px;
+    color: $rosado;
+    mix-blend-mode: color-dodge;
+}
+
+.caja1{
+    background-color: $azul;
+    width: $ancho;
+}
+
+
+
+@mixin condicion($color){
+background-color: ($color);
+}
+
+
+//@if $color == $bg1{
+//   color: yellow;
+//}
+//@else if $color == $bgAside {
+//    $color: white;
+//}
+
+
+$color-primary: white;
+$color-primary-light: $verdeClaro;
+$color-primary-dark: $verdeClaro;
+
+//$color-primary: #81c2de;
+//$color-primary-light: #b4f5ff;
+//$color-primary-dark: #4f92ac;
+
+$color-white: #FFFBFA;
+
+$color-black: #191308;
+
+
+.wrapperNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
+
+  background-image: linear-gradient(to bottom right, rgba($color-primary,1),rgba($color-primary-dark,1));
+  transition: all .4s ease-out;
+  $color-primary-dark: white;
+  
+}
+.wrapperFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+
+  background-image: linear-gradient(to bottom right, rgba($color-primary,1),rgba($color-primary-light,1));
+  transition: all .4s ease-out;
+  
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+  }
+}
+
+.social-link {
+
+  &--linkedin {
+    color: #2d76b0;
+  }
+
+  &--facebook {
+    color: #000;
+  }
+
+  &--instagram {
+    color: #9a2970;
+  }
+
+  &--dribbble {
+    color: #b53561;
+  }
+
+  & .social-svg {
+    width: 2rem;
+    height: 2rem;
+
+    & .social-group {
+
+      &__icon {
+        fill: $color-black;
+        transition: all .2s;
+      }
+
+      &__inner-circle {
+        fill: transparent;
+        transition: all .2s;
+      }
+
+      &__outline {
+        stroke: $color-black;
+        transform-origin: 50% 50%;
+        transition: all .2s;
+      }
+  
+  }
+
+  &:hover, &:active, &:focus {
+
+    & .social-group {
+
+      &__icon {
+        fill: $color-white;
+        transition: all .45s;
+      }
+
+      &__inner-circle {
+        fill: currentColor;
+        transition: all .45s;
+
+        &--instagram {
+          fill: url(#simpleInsta) !important;
+        }
+
+      }
+
+      &__outline {
+        stroke: currentColor;
+        transform: scale(1.1);
+        transition: all .45s;
+      }
+
+    } 
+
+  }
+
+  }
+
 }

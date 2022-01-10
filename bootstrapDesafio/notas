@@ -1,0 +1,73 @@
+CONSIGNA:
+aplicar un mixin
+aplicar un mapa
+aplicar un extend
+para modificar cualquier elemento del sitio
+mejorar el SEO en el sitio
+
+INCLUIR:
+declarar mapa y usar map-get
+extender una clase base y modificarla
+generar mixin para reutilizar codigo
+sumar keywords, desc, titulo, encabezado a las paginas
+
+EN GOOGLE DOCS:
+explicar cambios del punto anterior
+
+
+mixin:
+para definir estilos pueden recibir argumentos
+
+
+mapa: 
+variable coleccion de variables
+key value
+
+
+CORRECCION 2da EPFINAL
+ 1)Recordá que las etiquetas en que se divide el body son header (no head), 
+ main y footer, y el nav correspondería más al header que al main.
+ //FLOR: CORREGIDO 
+
+ 2) La clase "container" tal vez te convendría usarla con algo más chico, 
+ por ejemplo el texto y la imagen que tenés en el home. 
+ El div que los envuelve podría ser el container, 
+ luego una fila y dentro las columnas (igualmente está bastante bien, 
+ nada más lo indico porque el container te quedó muy arriba y tal vez 
+ el nav y el carrusel no lo requieren).
+ //FLOR: creo que ahi quedo corregido. Me gusta mas ahora que queda una 
+ banda de imagen de der a izq entera. 
+ 
+ 3)El nav bar no funciona en la versión responsive, tendrías que revisar 
+ qué pudiste haber modificado o qué podría faltar
+ //FLOR: meti diferentes nav bars del la pag de bootstrap pero ninguna 
+ me funciona bien. es posible que sea algo mas? 
+
+ 4)revisá la imagen que está suelta que en la versión responsive es 
+ más grande que la pantalla.
+ //FLOR: no estoy segura de entender este punto. esta de todos modos corregido?
+ cambie una imagen, pero no estoy segura que sea esa.
+
+ 5)PROBLEMAS!!!!!!!
+ FLOR: al achicar la pagina, en texto Lorem ipsum del contenedor ocurre que queda el texto en una
+ columna muy finita cuando achico la pagina. como puedo evitar que la columna de una row 
+ se deforme tanto con un texto? no para con la imagen pero si con el texto.
+ 6) las imagenes de los contenedores no son responsive y no entiendo por que. estuve leyendo de 
+ transformacion de imagenes dinamicas, pero por ahora quiero hacer algo simple.
+
+ //añadi color gradiente 
+ //añadi animacion en social links
+ //cambie animacion botones contacto
+ //boton animacion "descrubir" en homepage
+
+
+
+
+
+
+
+
+ 
+
+
+

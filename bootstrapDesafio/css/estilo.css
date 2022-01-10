@@ -30,8 +30,92 @@ h6 {
   font-weight: lighter;
   font-size: 1rem; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   background-color: whitesmoke; }
+
+header h1 {
+  color: #0f152ede; }
+
+.blender {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px; }
+
+.blender img {
+  position: absolute; }
+
+.blender h1 {
+  font-size: 65px;
+  color: #a1799e;
+  mix-blend-mode: color-dodge; }
+
+.caja1 {
+  background-color: #0f152ede;
+  width: 420px; }
+
+.wrapperNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
+  background-image: linear-gradient(to bottom right, white, #6ca589);
+  transition: all .4s ease-out; }
+
+.wrapperFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, white, #6ca589);
+  transition: all .4s ease-out; }
+  .wrapperFooter__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%; }
+
+.social-link--linkedin {
+  color: #2d76b0; }
+
+.social-link--facebook {
+  color: #000; }
+
+.social-link--instagram {
+  color: #9a2970; }
+
+.social-link--dribbble {
+  color: #b53561; }
+
+.social-link .social-svg {
+  width: 2rem;
+  height: 2rem; }
+  .social-link .social-svg .social-group__icon {
+    fill: #191308;
+    transition: all .2s; }
+  .social-link .social-svg .social-group__inner-circle {
+    fill: transparent;
+    transition: all .2s; }
+  .social-link .social-svg .social-group__outline {
+    stroke: #191308;
+    transform-origin: 50% 50%;
+    transition: all .2s; }
+  .social-link .social-svg:hover .social-group__icon, .social-link .social-svg:active .social-group__icon, .social-link .social-svg:focus .social-group__icon {
+    fill: #FFFBFA;
+    transition: all .45s; }
+  .social-link .social-svg:hover .social-group__inner-circle, .social-link .social-svg:active .social-group__inner-circle, .social-link .social-svg:focus .social-group__inner-circle {
+    fill: currentColor;
+    transition: all .45s; }
+    .social-link .social-svg:hover .social-group__inner-circle--instagram, .social-link .social-svg:active .social-group__inner-circle--instagram, .social-link .social-svg:focus .social-group__inner-circle--instagram {
+      fill: url(#simpleInsta) !important; }
+  .social-link .social-svg:hover .social-group__outline, .social-link .social-svg:active .social-group__outline, .social-link .social-svg:focus .social-group__outline {
+    stroke: currentColor;
+    transform: scale(1.1);
+    transition: all .45s; }
 
 label {
   color: #043832;
@@ -63,12 +147,11 @@ label {
     transform: rotateZ(0); } }
 
 .buttonSend {
-  height: 4em;
-  width: 7em;
-  background: #b8a5a5;
-  background: linear-gradient(top, #705a5a, #6b4c4c);
+  height: 3em;
+  width: 6em;
+  background: #6ca5895b;
   border: none;
-  border-top: 3px solid #ffe9e4;
+  border-top: 3px solid #0c554cde;
   border-radius: 0 0 0.2em 0.2em;
   color: #fff;
   font-family: Helvetica, Arial, Sans-serif;
@@ -76,18 +159,82 @@ label {
   transform-origin: 50% 5em; }
 
 .buttonReset {
-  height: 4em;
-  width: 7em;
-  background: #b8a5a5;
-  background: linear-gradient(top, #705a5a, #6b4c4c);
+  height: 3em;
+  width: 6em;
+  background: #6ca5895b;
   border: none;
-  border-top: 3px solid #ffe9e4;
+  border-top: 3px solid #0c554cde;
   border-radius: 0 0 0.2em 0.2em;
   color: #fff;
   font-family: Helvetica, Arial, Sans-serif;
   font-size: 0.7em;
   transform-origin: 50% 5em; }
 
+.button {
+  --offset: 10px;
+  --border-size: 2px;
+  display: block;
+  position: relative;
+  padding: 1.5em 3em;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #b3b957;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: background .8s ease; }
+  .button:hover {
+    background: rgba(100, 0, 0, 0.03); }
+  .button__horizontal, .button__vertical {
+    position: absolute;
+    top: var(--horizontal-offset, 0);
+    right: var(--vertical-offset, 0);
+    bottom: var(--horizontal-offset, 0);
+    left: var(--vertical-offset, 0);
+    transition: transform .8s ease;
+    will-change: transform; }
+    .button__horizontal::before, .button__vertical::before {
+      content: '';
+      position: absolute;
+      border: inherit; }
+  .button__horizontal {
+    --vertical-offset: calc(var(--offset) * -1);
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor; }
+    .button__horizontal::before {
+      top: calc(var(--vertical-offset) - var(--border-size));
+      bottom: calc(var(--vertical-offset) - var(--border-size));
+      left: calc(var(--vertical-offset) * -1);
+      right: calc(var(--vertical-offset) * -1); }
+  .button:hover .button__horizontal {
+    transform: scaleX(0); }
+  .button__vertical {
+    --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor; }
+    .button__vertical::before {
+      top: calc(var(--horizontal-offset) * -1);
+      bottom: calc(var(--horizontal-offset) * -1);
+      left: calc(var(--horizontal-offset) - var(--border-size));
+      right: calc(var(--horizontal-offset) - var(--border-size)); }
+  .button:hover .button__vertical {
+    transform: scaleY(0); }
+
 @media (orientation: landscape) {
   body {
     grid-auto-flow: column; } }
+
+/*Creamos el bucle para usar los valores del mapa*/
+.btn--twitter {
+  background-color: #55acee; }
+
+.btn--facebook {
+  background-color: #3a5795; }
+
+.btn--instagram {
+  background-color: #9e2f59; }
