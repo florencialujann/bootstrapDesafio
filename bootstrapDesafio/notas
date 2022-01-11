@@ -10,6 +10,14 @@ declarar mapa y usar map-get
 extender una clase base y modificarla
 generar mixin para reutilizar codigo
 sumar keywords, desc, titulo, encabezado a las paginas
+//FLOR: ademas inclui una operacion en _mediaq.scss
+{
+    @media (max-width: 1199.98px) {
+  .responsive-font {
+    font-size: $responsive-font-size*0.8;
+  }
+}
+}
 
 EN GOOGLE DOCS:
 explicar cambios del punto anterior

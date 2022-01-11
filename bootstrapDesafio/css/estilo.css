@@ -55,10 +55,22 @@ header h1 {
   color: #a1799e;
   mix-blend-mode: color-dodge; }
 
-.caja1 {
-  background-color: #0f152ede;
-  width: 420px; }
+.blender {
+  background-color: #a1799e; }
 
+/*
+@mixin condicion($color){
+background-color: ($color);
+}
+
+
+@if $color == $bg1{
+   color: $rosado;
+}
+@else if $color == $bgAside {
+    color: $tierra;
+}
+*/
 .wrapperNav {
   display: flex;
   justify-content: space-around;
@@ -232,12 +244,12 @@ label {
 /* If the screen size is 1200px wide or more, set the font-size to 80px */
 @media (min-width: 1200px) {
   .responsive-font {
-    font-size: 15px; } }
+    font-size: 16px; } }
 
 /* If the screen size is smaller than 1200px, set the font-size to 30px */
 @media (max-width: 1199.98px) {
   .responsive-font {
-    font-size: 10px; } }
+    font-size: 12.8px; } }
 
 /*Creamos el bucle para usar los valores del mapa*/
 .btn--twitter {
@@ -248,3 +260,7 @@ label {
 
 .btn--instagram {
   background-color: #9e2f59; }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto; }

@@ -26,11 +26,15 @@ header h1{
     mix-blend-mode: color-dodge;
 }
 
-.caja1{
-    background-color: $azul;
-    width: $ancho;
+.blender{
+    background-color: $rosado;
+    
 }
 
+$color: $verdeOscuro;
+$bg1: $verdeOscuro;
+$bgaside: $verdeClaro;
+$bgblender: $rosado;
 
 
 @mixin condicion($color){
@@ -38,21 +42,17 @@ background-color: ($color);
 }
 
 
-//@if $color == $bg1{
-//   color: yellow;
-//}
-//@else if $color == $bgAside {
-//    $color: white;
-//}
+@if $color == $bg1{
+   color: $rosado;
+}
+@else if $color == $bgAside {
+    color: $tierra;
+}
 
 
 $color-primary: white;
 $color-primary-light: $verdeClaro;
 $color-primary-dark: $verdeClaro;
-
-//$color-primary: #81c2de;
-//$color-primary-light: #b4f5ff;
-//$color-primary-dark: #4f92ac;
 
 $color-white: #FFFBFA;
 
