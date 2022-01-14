@@ -27,92 +27,131 @@
     </header>
     <!--main-->
     <main class="container">
+        <nav class="navbar navbar-expand-lg navbar-light colorNavi">
+            <div class="container-fluid">
+                <a class="navbar-brand"
+                    href="#"></a>
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedConte nt"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                aria-current="page"
+                                href="../index.html">NEW IN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="../pages/productos.html">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="../pages/tPSOM.html">THE PILLOW STATE OF MIND</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="../pages/contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
 
+                </div>
+            </div>
+        </nav>
         <!--formularioContacto-->
-        <form class="row mt-5">
-            <!--# porque no va a ningun lado-->
-            <div class="col-12 ">
-                <h3>
-                    Contacto
-                </h3>
-            </div>
-
-            <div class="col-12">
-                <h4>
-                    Envianos tu consulta, comentario y/o sugerencia completando el siguiente
-                    formulario.
-                </h4>
-            </div>
-
-            <fieldset class="col-12 p-3 mt-2">
-
-
-                <div class="row-sm">
-                    <label for="nombre">Nombre</label>
-                    <input type="text"
-                        name="nombre"
-                        placeholder="Juana">
-                </div>
-                <div class="row-sm">
-                    <label for="apellido">Apellido</label>
-                    <input type="text"
-                        name="apellido"
-                        placeholder="de Arco">
-                </div>
-                <div class="row-sm">
-                    <label for="telefono">Telefono</label>
-                    <input type="number"
-                        name="telefono"
-                        placeholder="1163688829">
-                </div>
-                <div class="row-sm">
-                    <label for="email">*Email</label>
-                    <input type="email"
-                        required
-                        name="email"
-                        placeholder="juanadearco@gmail.com">
-                </div>
-                <div class="row-sm">
-                    <label for="password">Password</label>
-                    <input type="password"
-                        name="contraseña">
-                </div>
-                <div class="row-sm">
-                    <label for="pais">País</label>
-                    <select name="pais"
-                        id="">
-                        <option value="argentina">ARGENTINA</option>
-                        <option value="uruguay">URUGUAY</option>
-                        <option value="peru">PERU</option>
-                        <option value="chile">CHILE</option>
-                        <option value="brasil">BRASIL</option>
-                    </select>
+        <div class="container">
+            <form class="row mt-5">
+                <!--# porque no va a ningun lado-->
+                <div class="col-12 ">
+                    <h3>
+                        Contacto
+                    </h3>
                 </div>
 
-                <div class="row-sm">
+                <div class="col-12">
+                    <h4>
+                        Envianos tu consulta, comentario y/o sugerencia completando el siguiente
+                        formulario.
+                    </h4>
+                </div>
 
-                    <label for="Comentarios">Comentarios</label>
-                    <br>
-                    <textarea name="comentario"
-                        id=""
-                        cols="50"
-                        rows="10">
+                <fieldset class="col-12 p-3 mt-2">
+
+
+                    <div class="row-sm">
+                        <label for="nombre">Nombre</label>
+                        <input type="text"
+                            name="nombre"
+                            placeholder="Juana">
+                    </div>
+                    <div class="row-sm">
+                        <label for="apellido">Apellido</label>
+                        <input type="text"
+                            name="apellido"
+                            placeholder="de Arco">
+                    </div>
+                    <div class="row-sm">
+                        <label for="telefono">Telefono</label>
+                        <input type="number"
+                            name="telefono"
+                            placeholder="1163688829">
+                    </div>
+                    <div class="row-sm">
+                        <label for="email">*Email</label>
+                        <input type="email"
+                            required
+                            name="email"
+                            placeholder="juanadearco@gmail.com">
+                    </div>
+                    <div class="row-sm">
+                        <label for="password">Password</label>
+                        <input type="password"
+                            name="contraseña">
+                    </div>
+                    <div class="row-sm">
+                        <label for="pais">País</label>
+                        <select name="pais"
+                            id="">
+                            <option value="argentina">ARGENTINA</option>
+                            <option value="uruguay">URUGUAY</option>
+                            <option value="peru">PERU</option>
+                            <option value="chile">CHILE</option>
+                            <option value="brasil">BRASIL</option>
+                        </select>
+                    </div>
+
+                    <div class="row-sm">
+
+                        <label for="Comentarios">Comentarios</label>
+                        <br>
+                        <textarea name="comentario"
+                            id=""
+                            cols="50"
+                            rows="10">
                     </textarea>
-                    <br>
-                </div>
-                <div class="row-sm">
-                    <input type="submit"
-                        value="Enviar >"
-                        class="buttonSend">
+                        <br>
+                    </div>
+                    <div class="row-sm">
+                        <input type="submit"
+                            value="Enviar >"
+                            class="buttonSend">
 
-                    <input type="reset"
-                        class="buttonReset"
-                        value="Borrar todo">
+                        <input type="reset"
+                            class="buttonReset"
+                            value="Borrar todo">
 
-                </div>
+                    </div>
 
-            </fieldset>
-        </form>
+                </fieldset>
+            </form>
+        </div>
     </main>
     <!--footer-->
     <footer>

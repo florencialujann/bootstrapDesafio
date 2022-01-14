@@ -1,14 +1,14 @@
 CONSIGNA:
-aplicar un mixin
-aplicar un mapa
-aplicar un extend
+aplicar un mixin- 
+aplicar un mapa- 
+aplicar un extend- OK
 para modificar cualquier elemento del sitio
 mejorar el SEO en el sitio
 
 INCLUIR:
-declarar mapa y usar map-get
-extender una clase base y modificarla
-generar mixin para reutilizar codigo
+declarar mapa y usar map-get- 
+extender una clase base y modificarla- 
+generar mixin para reutilizar codigo- 
 sumar keywords, desc, titulo, encabezado a las paginas
 //FLOR: ademas inclui una operacion en _mediaq.scss
 {

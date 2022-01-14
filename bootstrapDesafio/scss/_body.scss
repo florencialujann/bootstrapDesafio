@@ -6,7 +6,7 @@ box-sizing: border-box;
 }
 
 body{
-    background-color: whitesmoke;
+    background-color: $background;
 }
 header h1{
     color: $azul;
@@ -29,24 +29,6 @@ header h1{
 .blender{
     background-color: $rosado;
     
-}
-
-$color: $verdeOscuro;
-$bg1: $verdeOscuro;
-$bgaside: $verdeClaro;
-$bgblender: $rosado;
-
-
-@mixin condicion($color){
-background-color: ($color);
-}
-
-
-@if $color == $bg1{
-   color: $rosado;
-}
-@else if $color == $bgAside {
-    color: $tierra;
 }
 
 
