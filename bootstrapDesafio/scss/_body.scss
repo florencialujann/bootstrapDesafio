@@ -1,16 +1,36 @@
-@import "paleta";
 *{
 margin:0;
 padding:0;
 box-sizing: border-box;
 }
 
-body{
-    background-color: $background;
+body {
+  background-color: $background;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-align: center;
 }
-header h1{
-    color: $azul;
+
+.articles {
+  display: inline-block;
+  text-align: left;
 }
+
+.article {
+  height: 600px;
+  width: 300px;
+  float: left;
+  
+  @media (max-width: 915px) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+
+
 .blender{
     display: flex;
     align-items: center;
@@ -20,7 +40,7 @@ header h1{
 .blender img{
     position: absolute;
 }
-.blender h1{
+.blender h2{
     font-size: 65px;
     color: $rosado;
     mix-blend-mode: color-dodge;
@@ -52,6 +72,7 @@ $color-black: #191308;
   $color-primary-dark: white;
   
 }
+
 .wrapperFooter {
   display: flex;
   justify-content: space-around;
